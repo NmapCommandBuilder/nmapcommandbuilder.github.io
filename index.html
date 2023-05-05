@@ -5,11 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
-	<ul>
-		<li><a href="#" onclick="showContent('home')">Home</a></li>
-		<li><a href="#" onclick="showContent('about')">About</a></li>
-		<li><a href="#" onclick="showContent('contact')">Contact</a></li>
-	</ul>
+	<div class="tab">
+		<button class="tablinks active" onclick="showContent('home')">Home</button>
+		<button class="tablinks" onclick="showContent('about')">About</button>
+		<button class="tablinks" onclick="showContent('contact')">Contact</button>
+	</div>
 
 	<div id="content">
 		<!-- Content sections -->
