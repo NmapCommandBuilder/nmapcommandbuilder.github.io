@@ -1,8 +1,35 @@
-.section {
-    display: none;
-  }
-  
-  .section.active {
-    display: block;
-  }
-  
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#content {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #f2f2f2;
+	height: 200px;
+	text-align: center;
+}
+
+.content-section {
+	display: none;
+}
+
+.content-section.active {
+	display: block;
+}

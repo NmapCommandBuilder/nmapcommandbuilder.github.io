@@ -1,17 +1,12 @@
-var currentSection = 1;
-var numSections = 2;
+function showContent(content) {
+	// Get all content sections
+	var sections = document.getElementsByClassName('content-section');
 
-function changeSection() {
-  var nextSection = currentSection + 1;
-  if (nextSection > numSections) {
-    nextSection = 1;
-  }
+	// Hide all content sections
+	for (var i = 0; i < sections.length; i++) {
+		sections[i].classList.remove('active');
+	}
 
-  var currentSectionElem = document.getElementById("section" + currentSection);
-  var nextSectionElem = document.getElementById("section" + nextSection);
-
-  currentSectionElem.classList.remove("active");
-  nextSectionElem.classList.add("active");
-
-  currentSection = nextSection;
+	// Show the selected content section
+	document.getElementById(content + '-section').classList.add('active');
 }
