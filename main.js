@@ -1,3 +1,12 @@
+window.onload = function() {
+  const inputField = document.getElementById('ip-address');
+  const outputElement = document.getElementById('common-nmap-result');
+
+  inputField.addEventListener('input', () => {
+    outputElement.textContent = "nmap " + inputField.value;
+  });
+}
+
 function showContent(content) {
   // Get all tab links and content sections
   var tablinks = document.getElementsByClassName('tablinks');

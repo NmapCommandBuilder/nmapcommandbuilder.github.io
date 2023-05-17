@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dynamic Content</title>
+	<title>Nmap Command Builder</title>
 	<link rel="stylesheet" type="text/css" href="./styles.css">
-  <script src="./main.js"></script>
-</head>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Dynamic Content</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="./main.js"></script>
 </head>
 <body>
-  <div class="center">
-	<div class="tab">
-		<button id="home-tab" class="tablinks active" onclick="showContent('home')">Home</button>
-		<button id="about-tab" class="tablinks" onclick="showContent('about')">About</button>
-		<button id="contact-tab" class="tablinks" onclick="showContent('contact')">Contact</button>
+	<!--Center-->
+	<div class="border center curve shadow">
+		<!--Title-->
+		<div>
+			<h1 class="title">Nmap Command Builder (NCB)</h1>
+		</div>
+		<!--End Title-->
+
+		<!--IP Address-->
+		<div class="container card">
+			<div class="input-group">
+				<span class="input-group-text" id="basic-addon1">IP address</span>
+				<input id = "ip-address" type="text" class="form-control" placeholder="IP Address" aria-label="Username" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<!--End IP Address-->
+
+		<!--Tab-->
+		<div class="tab">
+			<button id="common-tab" class="rounded-top tablinks active right-shadow" onclick="showContent('common')">Common</button>
+			<button id="about-tab" class="rounded-top tablinks right-shadow" onclick="showContent('about')">About</button>
+			<button id="contact-tab" class="rounded-top tablinks right-shadow" onclick="showContent('contact')">Contact</button>
+		</div>
+		<!--End Tab-->
+
+		<!--Content-->
+		<div id="content" class="border shadow">
+
+			<!--common section-->
+			<div id="common-section" class="content-section active">
+				<h3>Common Nmap Command</h3>
+				<div>
+					<p id="common-nmap-result">nmap "IP Address"</p>
+				</div>
+			</div>
+			<!--end common section-->
+
+			<!--section two-->
+			<div id="about-section" class="content-section">
+				<p>This is the about section.</p>
+			</div>
+			<!--end section two-->
+
+			<!--section three-->
+			<div id="contact-section" class="content-section">
+				<p>This is the weird stuff</p>
+			</div>
+			<!--end section three-->
+		</div>
 	</div>
-
-	<div id="content">
-		<!-- Content sections -->
-		<div id="home-section" class="content-section active">
-			<p>To perform home stuff</p>
-		</div>
-
-		<div id="about-section" class="content-section">
-			<p>This is the about section.</p>
-		</div>
-
-		<div id="contact-section" class="content-section">
-			<p>This is the weird stuff</p>
-		</div>
-	</div>
-  </div>
+	<!--End Center-->
 </body>
 </html>
